@@ -1,0 +1,1460 @@
+/*=====================================
+GOOGLE FONT
+=====================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=====================================
+RESET
+=====================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#fff;
+    transition:1s;
+}
+
+/*=====================================
+BODY THEMES
+=====================================*/
+
+/* Morning */
+body.morning{
+    background:linear-gradient(
+    180deg,
+    #8fd3ff 0%,
+    #b7e6ff 35%,
+    #ffffff 100%);
+}
+
+/* Day */
+body.day{
+    background:linear-gradient(
+    180deg,
+    #3aa8ff 0%,
+    #6fc9ff 45%,
+    #dff6ff 100%);
+}
+
+/* Evening */
+body.evening{
+    background:linear-gradient(
+    180deg,
+    #ff8c42 0%,
+    #ff5e62 45%,
+    #7f53ac 100%);
+}
+
+/* Night */
+body.night{
+    background:linear-gradient(
+    180deg,
+    #020024 0%,
+    #090979 50%,
+    #000428 100%);
+}
+
+/*=====================================
+BACKGROUND
+=====================================*/
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-100;
+}
+
+.sky{
+    position:absolute;
+    inset:0;
+}
+
+/*=====================================
+CONTAINER
+=====================================*/
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:30px;
+    position:relative;
+    z-index:10;
+}
+
+/*=====================================
+GLASS EFFECT
+=====================================*/
+.glass{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:24px;
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.25);
+}
+
+/*=====================================
+HEADER
+=====================================*/
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    font-size:42px;
+}
+
+.logo h1{
+    font-size:34px;
+    font-weight:700;
+}
+
+/*=====================================
+SEARCH
+=====================================*/
+.search-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:rgba(255,255,255,.15);
+    border-radius:60px;
+    padding:8px;
+}
+
+.search-box input{
+    width:260px;
+    background:none;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size:16px;
+    padding:12px 20px;
+}
+
+.search-box input::placeholder{
+    color:#eee;
+}
+
+.search-box button{
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#fff;
+    color:#1976d2;
+    font-size:22px;
+    transition:.35s;
+}
+
+.search-box button:hover{
+    transform:scale(1.08);
+}
+
+.location-btn{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#00bcd4;
+    color:#fff;
+    font-size:22px;
+    transition:.35s;
+}
+
+.location-btn:hover{
+    transform:rotate(20deg) scale(1.1);
+}
+
+/*=====================================
+TOP BAR
+=====================================*/
+.top-bar{
+    padding:20px 30px;
+    margin-bottom:30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#greeting{
+    font-size:28px;
+}
+
+#liveClock{
+    font-size:34px;
+    font-weight:700;
+}
+
+/*=====================================
+CURRENT WEATHER CARD
+=====================================*/
+.weather-card{
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+}
+
+.left h2{
+
+    font-size:42px;
+
+}
+
+.left p{
+
+    margin-top:8px;
+
+    opacity:.9;
+
+}
+
+.temperature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:15px;
+
+}
+
+.temperature h1{
+
+    font-size:90px;
+
+    font-weight:700;
+
+}
+
+#unitBtn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 18px;
+
+    border-radius:15px;
+
+    background:#fff;
+
+    color:#1976d2;
+
+    font-weight:700;
+
+}
+
+.right img{
+
+    width:180px;
+
+}
+
+/*=====================================
+DETAIL CARDS
+=====================================*/
+.details{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(190px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    margin-bottom:12px;
+
+    font-weight:500;
+
+}
+
+.card p{
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+/*=====================================
+SUNRISE / SUNSET
+=====================================*/
+.sun-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+}
+
+.sun-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.sun-card i{
+
+    font-size:42px;
+
+}
+
+/*=====================================
+SECTION TITLES
+=====================================*/
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+/*=====================================
+HOURLY
+=====================================*/
+.hourly,
+.weekly,
+.history{
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+}
+/*=====================================
+ANIMATED SUN
+=====================================*/
+
+.sun{
+    position:absolute;
+    top:70px;
+    right:100px;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:#FFD54F;
+
+    box-shadow:
+    0 0 80px #FFD54F,
+    0 0 160px rgba(255,213,79,.7);
+
+    animation:
+    sunFloat 5s ease-in-out infinite,
+    sunGlow 3s ease-in-out infinite alternate;
+
+    opacity:0;
+}
+
+body.morning .sun,
+body.day .sun{
+    opacity:1;
+}
+
+@keyframes sunFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+@keyframes sunGlow{
+
+0%{
+
+box-shadow:
+0 0 70px #FFD54F,
+0 0 120px rgba(255,213,79,.6);
+
+}
+
+100%{
+
+box-shadow:
+0 0 100px #FFD54F,
+0 0 220px rgba(255,213,79,.9);
+
+}
+
+}
+
+/*=====================================
+MOON
+=====================================*/
+
+.moon{
+
+position:absolute;
+
+top:80px;
+
+right:110px;
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+background:#F5F5F5;
+
+box-shadow:
+0 0 60px rgba(255,255,255,.8);
+
+animation:moonFloat 6s ease-in-out infinite;
+
+opacity:0;
+
+}
+
+body.night .moon{
+
+opacity:1;
+
+}
+
+@keyframes moonFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+/*=====================================
+TWINKLING STARS
+=====================================*/
+
+.stars{
+
+position:absolute;
+
+inset:0;
+
+opacity:0;
+
+background-image:
+
+radial-gradient(circle,#fff 1.5px,transparent 2px),
+radial-gradient(circle,#fff 2px,transparent 2px),
+radial-gradient(circle,#fff 1px,transparent 2px);
+
+background-size:
+180px 180px,
+250px 250px,
+320px 320px;
+
+background-position:
+20px 40px,
+150px 180px,
+250px 90px;
+
+animation:starsBlink 2s linear infinite alternate;
+
+}
+
+body.night .stars{
+
+opacity:1;
+
+}
+
+@keyframes starsBlink{
+
+0%{
+
+filter:brightness(.7);
+
+}
+
+100%{
+
+filter:brightness(1.5);
+
+}
+
+}
+
+/*=====================================
+CLOUDS
+=====================================*/
+
+.cloud{
+
+position:absolute;
+
+background:#fff;
+
+border-radius:100px;
+
+filter:blur(2px);
+
+opacity:.9;
+
+}
+
+.cloud::before,
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+background:inherit;
+
+border-radius:50%;
+
+}
+
+.cloud1{
+
+width:180px;
+height:60px;
+
+top:110px;
+left:-300px;
+
+animation:cloudMove1 45s linear infinite;
+
+}
+
+.cloud1::before{
+
+width:80px;
+height:80px;
+
+top:-25px;
+left:20px;
+
+}
+
+.cloud1::after{
+
+width:95px;
+height:95px;
+
+top:-35px;
+right:20px;
+
+}
+
+.cloud2{
+
+width:240px;
+height:70px;
+
+top:220px;
+left:-350px;
+
+animation:cloudMove2 60s linear infinite;
+
+animation-delay:8s;
+
+}
+
+.cloud2::before{
+
+width:90px;
+height:90px;
+
+top:-30px;
+left:25px;
+
+}
+
+.cloud2::after{
+
+width:100px;
+height:100px;
+
+top:-35px;
+right:30px;
+
+}
+
+.cloud3{
+
+width:170px;
+height:55px;
+
+top:330px;
+left:-250px;
+
+animation:cloudMove3 55s linear infinite;
+
+animation-delay:14s;
+
+}
+
+.cloud3::before{
+
+width:70px;
+height:70px;
+
+top:-20px;
+left:20px;
+
+}
+
+.cloud3::after{
+
+width:85px;
+height:85px;
+
+top:-30px;
+right:15px;
+
+}
+
+.cloud4{
+
+width:220px;
+height:70px;
+
+top:450px;
+left:-380px;
+
+animation:cloudMove4 75s linear infinite;
+
+animation-delay:20s;
+
+}
+
+.cloud4::before{
+
+width:90px;
+height:90px;
+
+top:-30px;
+left:25px;
+
+}
+
+.cloud4::after{
+
+width:100px;
+height:100px;
+
+top:-35px;
+right:25px;
+
+}
+
+@keyframes cloudMove1{
+
+from{
+transform:translateX(-350px);
+}
+
+to{
+transform:translateX(calc(100vw + 700px));
+}
+
+}
+
+@keyframes cloudMove2{
+
+from{
+transform:translateX(-400px);
+}
+
+to{
+transform:translateX(calc(100vw + 800px));
+}
+
+}
+
+@keyframes cloudMove3{
+
+from{
+transform:translateX(-300px);
+}
+
+to{
+transform:translateX(calc(100vw + 600px));
+}
+
+}
+
+@keyframes cloudMove4{
+
+from{
+transform:translateX(-500px);
+}
+
+to{
+transform:translateX(calc(100vw + 900px));
+}
+
+}
+
+/*=====================================
+RAIN EFFECT
+=====================================*/
+
+.rain{
+
+position:absolute;
+
+inset:0;
+
+display:none;
+
+pointer-events:none;
+
+opacity:.35;
+
+background-image:
+linear-gradient(
+transparent,
+rgba(255,255,255,.9));
+
+background-size:2px 35px;
+
+animation:rainFall .35s linear infinite;
+
+}
+
+body.rainy .rain{
+
+display:block;
+
+}
+
+@keyframes rainFall{
+
+from{
+
+background-position:0 -40px;
+
+}
+
+to{
+
+background-position:0 40px;
+
+}
+
+}
+
+/*=====================================
+SNOW EFFECT
+=====================================*/
+
+.snow{
+
+position:absolute;
+
+inset:0;
+
+display:none;
+
+pointer-events:none;
+
+opacity:.8;
+
+background-image:
+radial-gradient(circle,#fff 2px,transparent 2px);
+
+background-size:40px 40px;
+
+animation:snowFall 8s linear infinite;
+
+}
+
+body.snowy .snow{
+
+display:block;
+
+}
+
+@keyframes snowFall{
+
+from{
+
+background-position:0 -100px;
+
+}
+
+to{
+
+background-position:120px 100vh;
+
+}
+
+}
+/*=====================================
+FOG EFFECT
+=====================================*/
+
+.fog{
+    position:absolute;
+    width:220%;
+    height:180px;
+    background:rgba(255,255,255,.12);
+    filter:blur(35px);
+    display:none;
+}
+
+.fog1{
+    top:18%;
+    left:-120%;
+    animation:fogMove1 35s linear infinite;
+}
+
+.fog2{
+    top:50%;
+    left:-140%;
+    animation:fogMove2 45s linear infinite;
+}
+
+body.foggy .fog{
+    display:block;
+}
+
+@keyframes fogMove1{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(120%);
+    }
+}
+
+@keyframes fogMove2{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(140%);
+    }
+}
+
+/*=====================================
+LIGHTNING
+=====================================*/
+
+.lightning{
+    position:absolute;
+    inset:0;
+    background:#fff;
+    opacity:0;
+    pointer-events:none;
+}
+
+body.thunder .lightning{
+    animation:lightningFlash 6s infinite;
+}
+
+@keyframes lightningFlash{
+
+0%,92%,100%{
+opacity:0;
+}
+
+93%{
+opacity:.95;
+}
+
+94%{
+opacity:0;
+}
+
+95%{
+opacity:.8;
+}
+
+96%{
+opacity:0;
+}
+
+}
+
+/*=====================================
+HOURLY FORECAST
+=====================================*/
+
+.hourly-container{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    padding-bottom:12px;
+}
+
+.hourly-container::-webkit-scrollbar{
+    height:8px;
+}
+
+.hourly-container::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.25);
+    border-radius:20px;
+}
+
+.hour-card{
+
+    min-width:130px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+}
+
+.hour-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    background:rgba(255,255,255,.20);
+
+}
+
+.hour-card img{
+
+    width:65px;
+
+    margin:12px 0;
+
+}
+
+.hour-card h3{
+
+    font-size:28px;
+
+}
+
+.hour-card small{
+
+    opacity:.8;
+
+}
+
+/*=====================================
+WEEKLY FORECAST
+=====================================*/
+
+.week-item{
+
+    display:grid;
+
+    grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.10);
+
+    transition:.35s;
+
+}
+
+.week-item:hover{
+
+    transform:translateX(10px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.week-item img{
+
+    width:48px;
+
+}
+
+/*=====================================
+SEARCH HISTORY
+=====================================*/
+
+.history{
+
+    padding:30px;
+
+}
+
+#historyContainer{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.history-item{
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.12);
+
+    transition:.3s;
+
+}
+
+.history-item:hover{
+
+    background:rgba(255,255,255,.22);
+
+}
+
+/*=====================================
+LOADER
+=====================================*/
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+}
+
+.spinner{
+
+    width:80px;
+
+    height:80px;
+
+    border:7px solid rgba(255,255,255,.20);
+
+    border-top:7px solid #fff;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*=====================================
+CARD ANIMATION
+=====================================*/
+
+.weather-card,
+.card,
+.hour-card,
+.week-item,
+.sun-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=====================================
+GLASS SHINE
+=====================================*/
+
+.glass{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.glass::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-100%;
+
+    width:60%;
+
+    height:250%;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,0),
+    rgba(255,255,255,.18),
+    rgba(255,255,255,0));
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.glass:hover::before{
+
+    left:150%;
+
+}
+
+/*=====================================
+SMOOTH TRANSITION
+=====================================*/
+
+body,
+.card,
+.glass,
+.week-item,
+.hour-card,
+.sun,
+.moon,
+.cloud{
+
+    transition:.5s;
+
+}
+
+/*=====================================
+RESPONSIVE
+=====================================*/
+
+@media(max-width:992px){
+
+.weather-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.right img{
+
+width:150px;
+
+}
+
+.temperature{
+
+justify-content:center;
+
+}
+
+.top-bar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+}
+
+.search-area{
+
+width:100%;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+.search-box input{
+
+width:100%;
+
+}
+
+.details{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+
+
+}
+
+@media(max-width:576px){
+
+.container{
+
+padding:15px;
+
+}
+
+.logo h1{
+
+font-size:26px;
+
+}
+
+.left h2{
+
+font-size:28px;
+
+}
+
+.temperature h1{
+
+font-size:60px;
+
+}
+
+#liveClock{
+
+font-size:24px;
+
+}
+
+.details{
+
+grid-template-columns:1fr;
+
+}
+
+.hour-card{
+
+min-width:110px;
+
+}
+
+}
+
+/*=====================================
+END OF STYLE.CSS
+=====================================*/
+.week-card{
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(20px);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+.week-card:hover{
+    transform:translateY(-5px);
+}
+
+.week-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.week-header img{
+    width:70px;
+}
+
+.week-temp{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    font-size:22px;
+    font-weight:700;
+}
+
+.week-details{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.week-details div{
+    background:rgba(255,255,255,.10);
+    padding:12px;
+    border-radius:12px;
+    text-align:center;
+}
+.week-card h3{
+    font-size:24px;
+}
+
+.week-card h4{
+    font-size:18px;
+    margin-top:8px;
+}
+
+.week-card p{
+    opacity:.8;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkyCast Pro | Premium Weather App</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--==============================
+        ANIMATED BACKGROUND
+    ==============================-->
+
+    <div class="background">
+
+        <div class="sky"></div>
+
+        <!-- Sun -->
+        <div class="sun"></div>
+
+        <!-- Moon -->
+        <div class="moon"></div>
+
+        <!-- Stars -->
+        <div class="stars"></div>
+
+        <!-- Clouds -->
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+
+        <!-- Rain -->
+        <div class="rain"></div>
+
+        <!-- Snow -->
+        <div class="snow"></div>
+
+        <!-- Fog -->
+        <div class="fog fog1"></div>
+        <div class="fog fog2"></div>
+
+        <!-- Lightning -->
+        <div class="lightning"></div>
+
+    </div>
+
+    <!--==============================
+            MAIN CONTAINER
+    ==============================-->
+
+    <div class="container">
+
+        <!--==============================
+                HEADER
+        ==============================-->
+
+        <header>
+
+            <div class="logo">
+
+                <i class="ri-cloudy-2-fill"></i>
+
+                <h1>SkyCast Pro</h1>
+
+            </div>
+
+            <div class="search-area">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search any city..."
+                    >
+
+                    <button id="searchBtn">
+
+                        <i class="ri-search-line"></i>
+
+                    </button>
+
+                </div>
+
+                <!-- Current Location -->
+                <button
+                    class="location-btn"
+                    id="locationBtn"
+                    title="Current Location">
+
+                    <i class="ri-navigation-fill"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!--==============================
+            GREETING + CLOCK
+        ==============================-->
+
+        <section class="top-bar glass">
+
+            <div>
+
+                <h2 id="greeting">
+
+                    Good Morning ☀️
+
+                </h2>
+
+                <p id="date">
+
+                    Tuesday, July 21
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2 id="liveClock">
+
+                    12:00:00
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!--==============================
+            CURRENT WEATHER
+        ==============================-->
+
+        <section class="weather-card glass">
+
+            <div class="left">
+
+                <h2 id="city">
+
+                    Karachi
+
+                </h2>
+
+                <p id="condition">
+
+                    Clear Sky
+
+                </p>
+
+                <div class="temperature">
+
+                    <h1 id="temp">
+
+                        32°
+
+                    </h1>
+
+                    <button id="unitBtn">
+
+                        °C
+
+                    </button>
+
+                </div>
+
+                <p id="feelsLike">
+
+                    Feels Like 35°
+
+                </p>
+
+            </div>
+
+            <div class="right">
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="weather">
+
+            </div>
+
+        </section>
+
+        <!--==============================
+            WEATHER DETAILS
+        ==============================-->
+
+        <section class="details">
+
+            <div class="card glass">
+
+                <i class="ri-drop-fill"></i>
+
+                <h3>Humidity</h3>
+
+                <p id="humidity">0%</p>
+
+            </div>
+
+            <div class="card glass">
+
+                <i class="ri-windy-fill"></i>
+
+                <h3>Wind</h3>
+
+                <p id="wind">0 km/h</p>
+
+            </div>
+
+            <div class="card glass">
+
+                <i class="ri-compass-3-fill"></i>
+
+                <h3>Pressure</h3>
+
+                <p id="pressure">0 mb</p>
+
+            </div>
+
+            <div class="card glass">
+
+                <i class="ri-eye-fill"></i>
+
+                <h3>Visibility</h3>
+
+                <p id="visibility">0 km</p>
+
+            </div>
+
+            <div class="card glass">
+
+                <i class="ri-sun-fill"></i>
+
+                <h3>UV Index</h3>
+
+                <p id="uv">0</p>
+
+            </div>
+
+            <div class="card glass">
+
+                <i class="ri-leaf-fill"></i>
+
+                <h3>Air Quality</h3>
+
+                <p id="aqi">Good</p>
+
+            </div>
+
+        </section>
+
+        <!--==============================
+        SUNRISE / SUNSET
+        ==============================-->
+
+        <section class="sun-section glass">
+
+            <div class="sun-card">
+
+                <i class="ri-sunrise-fill"></i>
+
+                <div>
+
+                    <h4>Sunrise</h4>
+
+                    <p id="sunrise">--:--</p>
+
+                </div>
+
+            </div>
+
+            <div class="sun-card">
+
+                <i class="ri-sunset-fill"></i>
+
+                <div>
+
+                    <h4>Sunset</h4>
+
+                    <p id="sunset">--:--</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==============================
+            TODAY FORECAST
+        ==============================-->
+
+        <section class="glass hourly">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Today's Forecast
+
+                </h2>
+
+            </div>
+
+            <div
+                class="hourly-container"
+                id="hourlyContainer">
+
+            </div>
+
+        </section>
+
+        <!--==============================
+            7 DAY FORECAST
+        ==============================-->
+
+        <section class="glass weekly">
+
+            <div class="section-title">
+
+                <h2>
+
+                    7-Day Forecast
+
+                </h2>
+
+            </div>
+
+            <div id="weeklyContainer"></div>
+
+        </section>
+
+        <!--==============================
+            RECENT SEARCHES
+        ==============================-->
+
+        <section class="glass history">
+
+            <h2>
+
+                Recent Searches
+
+            </h2>
+
+            <div id="historyContainer"></div>
+
+        </section>
+
+        <!--==============================
+            LOADER
+        ==============================-->
+
+        <div
+            class="loader"
+            id="loader">
+
+            <div class="spinner"></div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
